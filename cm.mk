@@ -1,5 +1,5 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+#$(call inherit-product, vendor/cm/config/gsm.mk) - device is not gsm
 
 # Release name
 PRODUCT_RELEASE_NAME := gts210wifi
