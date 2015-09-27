@@ -14,8 +14,19 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+PRODUCT_PACKAGES += \
+    fstab.universal5433 \
+    init.carrier.rc \
+    init.universal5433.rc \
+    init.universal5433.usb.rc \
+    init.recovery.universal5433.rc \
+    ueventd.universal5433.rc
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/selinux/file_contexts:recovery/root/prebuilt_file_contexts
 
 $(call inherit-product, build/target/product/full.mk)
 
